@@ -1,0 +1,47 @@
+@import "../../node_modules/bulma/sass/utilities/_all.sass";
+@import "../../node_modules/bulma/sass/base/_all.sass";
+@import "../../node_modules/bulma/sass/elements/button.sass";
+
+$settingsWidth: 1200px;
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.settings-page {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.editor {
+    width: 100%;
+    max-width: $settingsWidth;
+    flex: 1 1 0%;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+
+    &__inner {
+        width: 100%;
+        max-width: $settingsWidth;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__buttons {
+        height: 25px;
+    }
+}

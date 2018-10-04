@@ -1,0 +1,32 @@
+{
+    "name": "predi-search",
+    "version": "0.0.1",
+    "description": "Predictive search bookmark manager",
+    "scripts": {
+        "clean": "rm -r ./dist",
+        "build:copydependencies": "mkdir -p ./dist && cp ./manifest.json ./dist/ && cp -r ./assets ./dist/",
+        "build:popup": "parcel build src/popup/popup.html --no-minify --public-url ./ --out-dir dist/app/popup",
+        "build:settings": "parcel build src/settings/settings.html --no-minify --public-url ./ --out-dir dist/app/settings",
+        "watch:settings": "parcel src/settings/settings.html --out-dir dist/app/settings",
+        "build": "npm run build:copydependencies && npm run build:popup && npm run build:settings",
+        "watch": "npm run build:copydependencies && parcel watch ./src/popup/popup.html --public-url ./ --out-dir dist/app --no-hmr"
+    },
+    "keywords": [
+        "chrome",
+        "bookmark",
+        "manager"
+    ],
+    "author": "Justin Niles",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/chrome": "0.0.72",
+        "node-sass": "^4.9.3",
+        "typescript": "^3.0.3"
+    },
+    "dependencies": {
+        "bulma": "^0.7.1",
+        "monaco-editor": "^0.14.3",
+        "parcel-bundler": "^1.10.1",
+        "preact": "^8.3.1"
+    }
+}

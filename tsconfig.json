@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "outDir": "./public",
+        "noImplicitAny": false,
+        "removeComments": true,
+        "sourceMap": true,
+        "jsx": "react",
+        "jsxFactory": "h",
+        "module": "commonjs"
+    },
+    "include": ["./src/**/*.ts", "./src/**/*.tsx"]
+}
